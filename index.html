@@ -1,0 +1,1140 @@
+<!doctype html>
+<html lang="ko" data-lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<title>WSM-6035 전동개폐기 사용설명서 | 우성하이텍 롤업스타</title>
+<meta name="description" content="원예시설용 전동개폐기 WSM-6035 사용설명서 · 우성하이텍(WSH) 롤업스타 · 안전·설치·전원연결·리미트 설정 상세 가이드">
+<meta name="theme-color" content="#c8102e">
+<meta name="color-scheme" content="light dark">
+<style>
+  :root{
+    --red:#c8102e; --red-d:#9c0c23; --ink:#1a1a1a; --sub:#555;
+    --line:#e5e5e5; --bg:#f4f5f7; --card:#ffffff; --ok:#1a7f37; --warn:#b45309;
+    --shadow:0 1px 3px rgba(0,0,0,.08),0 1px 2px rgba(0,0,0,.04);
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;color-scheme:light dark}
+  body{margin:0;font-family:"Malgun Gothic","맑은 고딕","Apple SD Gothic Neo",system-ui,sans-serif;
+    color:var(--ink);background:var(--bg);line-height:1.65;font-size:17px;padding-bottom:env(safe-area-inset-bottom)}
+  a{color:inherit}
+  .wrap{max-width:660px;margin:0 auto}
+
+  header{background:linear-gradient(135deg,var(--red),var(--red-d));color:#fff;padding:26px 20px 20px;text-align:center}
+  header .brand{font-size:14px;letter-spacing:2px;opacity:.9;font-weight:700}
+  header h1{margin:8px 0 4px;font-size:26px;font-weight:800;letter-spacing:-.5px}
+  header .model{display:inline-block;margin-top:6px;background:rgba(255,255,255,.18);padding:4px 14px;border-radius:999px;font-size:15px;font-weight:700}
+  header .sub{margin-top:10px;font-size:14px;opacity:.92}
+  .hero{margin:14px auto 0;max-width:300px;background:rgba(255,255,255,.92);border-radius:14px;padding:10px}
+  .hero img{width:100%;display:block}
+
+  nav{position:sticky;top:0;z-index:20;background:var(--card);border-bottom:1px solid var(--line);
+    overflow-x:auto;-webkit-overflow-scrolling:touch;white-space:nowrap;box-shadow:var(--shadow)}
+  nav .inner{display:inline-flex;gap:8px;padding:11px 14px}
+  nav a{flex:0 0 auto;text-decoration:none;font-size:14px;font-weight:700;color:var(--sub);
+    background:var(--bg);padding:8px 14px;border-radius:999px;border:1px solid var(--line)}
+  nav a:active{background:var(--red);color:#fff;border-color:var(--red)}
+
+  section{padding:20px 18px}
+
+  /* ===== 페이지 라우팅 ===== */
+  .appbar{position:sticky;top:0;z-index:30;display:flex;align-items:center;gap:10px;
+    background:var(--red);color:#fff;padding:12px 14px;box-shadow:0 2px 6px rgba(0,0,0,.15)}
+  .appbar .abtn{background:rgba(255,255,255,.2);color:#fff;border:0;padding:9px 13px;border-radius:9px;font-weight:800;font-size:14px;cursor:pointer}
+  .appbar .abtitle{flex:1;font-weight:800;font-size:16px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .appbar .abpage{font-size:13px;opacity:.9;font-weight:700;flex:0 0 auto}
+  .page{display:none}
+  .page.active{display:block;animation:fade .25s ease}
+  @keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+
+  .cover{background:linear-gradient(135deg,var(--red),var(--red-d));color:#fff;border-radius:16px;
+    padding:24px 20px;text-align:center;margin:16px 18px}
+  .cover .brand{font-size:13px;letter-spacing:2px;opacity:.9;font-weight:700}
+  .cover h1{margin:8px 0 4px;font-size:25px;font-weight:800}
+  .cover .model{display:inline-block;margin-top:6px;background:rgba(255,255,255,.18);padding:4px 14px;border-radius:999px;font-size:15px;font-weight:700}
+  .cover .coverimg{width:84%;max-width:280px;margin:14px auto 0;background:rgba(255,255,255,.92);border-radius:14px;padding:10px;display:block}
+  .toc{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:0 18px}
+  .toc a{display:flex;flex-direction:column;gap:6px;text-decoration:none;background:var(--card);
+    border:1px solid var(--line);border-radius:14px;padding:15px 14px;box-shadow:var(--shadow);color:var(--ink);min-height:96px}
+  .toc a .ti{font-size:25px}
+  .toc a .tt{font-weight:800;font-size:14.5px;line-height:1.3;flex:1}
+  .toc a .tn{font-size:12px;color:var(--sub);font-weight:700}
+  .toc a:active{border-color:var(--red);transform:scale(.98)}
+  .pager{display:flex;gap:10px;margin:28px 0 6px}
+  .pager button{flex:1;padding:14px 8px;border:1px solid var(--line);background:var(--card);
+    border-radius:12px;font-weight:800;font-size:14px;color:var(--ink);cursor:pointer;box-shadow:var(--shadow)}
+  .pager button.next{background:var(--red);color:#fff;border-color:var(--red)}
+  .pager button:active{opacity:.85}
+  h2{font-size:21px;font-weight:800;margin:0 0 14px;display:flex;align-items:center;gap:9px}
+  h2 .bar{width:5px;height:21px;background:var(--red);border-radius:3px;display:inline-block}
+  .subh{font-size:16.5px;font-weight:800;margin:20px 0 9px;color:var(--ink);border-left:3px solid var(--red);padding-left:9px}
+  .subh2{font-size:15px;font-weight:800;margin:14px 0 6px;color:var(--sub)}
+  .lead{margin:-4px 0 14px;color:var(--sub);font-size:14.5px}
+
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;box-shadow:var(--shadow);margin-bottom:14px}
+
+  table.spec{width:100%;border-collapse:collapse;font-size:15.5px}
+  table.spec th,table.spec td{padding:10px 8px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+  table.spec th{width:38%;color:var(--sub);font-weight:700;background:#fafafa}
+  table.spec tr:last-child th,table.spec tr:last-child td{border-bottom:0}
+
+  .perf{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px}
+  .perf .p{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 8px;text-align:center;box-shadow:var(--shadow)}
+  .perf .p .t{font-size:13px;color:var(--sub);font-weight:700}
+  .perf .p.mark{border-color:var(--red);box-shadow:0 0 0 2px rgba(200,16,46,.12)}
+  .perf .p .v{font-size:15px;margin-top:6px;font-weight:700}
+  .perf .p .v small{font-weight:600;color:var(--sub);font-size:12px}
+
+  .alert{border-radius:12px;padding:13px 15px;font-size:14.5px;margin-bottom:11px;display:flex;gap:10px;align-items:flex-start;line-height:1.55}
+  .alert .ic{font-size:19px;line-height:1.4;flex:0 0 auto}
+  .danger{background:#fdecec;border:1px solid #f5c2c2;color:#8a1220}
+  .caution{background:#fff7e6;border:1px solid #ffe1a8;color:#8a5a06}
+  .must{background:#eef6ff;border:1px solid #cfe3ff;color:#0b4a8a}
+  .symbols{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:6px}
+  .symbols .s{display:flex;gap:9px;align-items:flex-start;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:11px;font-size:13px;color:var(--sub)}
+  .symbols .s b{color:var(--ink);font-size:14px}
+  .symbols .s .em{font-size:20px}
+
+  .dir{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .dir .d{border-radius:12px;padding:14px;color:#fff;text-align:center}
+  .dir .cw{background:#1a7f37}.dir .ccw{background:#b91c1c}
+  .dir .d .big{font-size:16px;font-weight:800;margin-bottom:8px}
+  .dir .d .row{font-size:13.5px;background:rgba(255,255,255,.16);border-radius:8px;padding:6px;margin-top:6px}
+
+  .figbox{margin:12px 0;background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden;box-shadow:var(--shadow)}
+  .figbox img{width:100%;display:block;background:#fff}
+  .figbox figcaption{font-size:12.5px;color:var(--sub);padding:8px 12px;border-top:1px solid var(--line)}
+  .figrow{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .figrow .figbox{margin:0}
+  .figbox svg{width:100%;height:auto;display:block;background:#fff}
+  .namelist{list-style:none;margin:12px 0 0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:7px 14px}
+  .namelist li{font-size:13.5px;position:relative;padding-left:27px;line-height:1.4}
+  .namelist li .n{position:absolute;left:0;top:0;width:20px;height:20px;border-radius:50%;
+    background:var(--red);color:#fff;font-size:11px;font-weight:800;display:flex;align-items:center;justify-content:center}
+  .partfig{position:relative;display:block;line-height:0;border-radius:8px}
+  .partfig img{width:100%;display:block}
+  .partfig .mk{position:absolute;transform:translate(-50%,-50%);width:20px;height:20px;border-radius:50%;
+    background:var(--red);color:#fff;font-size:11px;font-weight:800;line-height:1;
+    display:flex;align-items:center;justify-content:center;box-shadow:0 0 0 2px #fff,0 1px 3px rgba(0,0,0,.5)}
+  @media (max-width:420px){.partfig .mk{width:17px;height:17px;font-size:9.5px}}
+
+  .proc{margin:8px 0;padding:0;list-style:none;counter-reset:p}
+  .proc li{position:relative;padding:9px 0 9px 32px;font-size:14.5px;border-bottom:1px solid var(--line);counter-increment:p;line-height:1.55}
+  .proc li:last-child{border-bottom:0}
+  .proc li::before{content:counter(p);position:absolute;left:0;top:9px;width:22px;height:22px;border-radius:50%;background:var(--red);color:#fff;font-size:12px;font-weight:800;display:flex;align-items:center;justify-content:center}
+  .bullet{margin:8px 0;padding-left:20px}
+  .bullet li{margin:6px 0;font-size:14.5px}
+  .kvtbl{width:100%;border-collapse:collapse;font-size:14px;margin:8px 0}
+  .kvtbl th,.kvtbl td{border:1px solid var(--line);padding:8px 9px;text-align:center}
+  .kvtbl th{background:#fafafa;color:var(--sub);font-weight:700}
+  .tipbox{background:#eef6ff;border:1px solid #cfe3ff;border-radius:10px;padding:12px 14px;font-size:14px;margin:10px 0;color:#0b4a8a}
+  .tipbox b{color:#083a6b}
+
+  details.acc{border:1px solid var(--line);border-radius:10px;margin:10px 0;background:var(--card);overflow:hidden}
+  details.acc summary{padding:13px 15px;font-weight:800;cursor:pointer;font-size:15px;list-style:none}
+  details.acc summary::-webkit-details-marker{display:none}
+  details.acc summary::before{content:"▸ ";color:var(--red)}
+  details.acc[open] summary::before{content:"▾ "}
+  details.acc .accbody{padding:2px 15px 15px}
+
+  .btn{display:flex;align-items:center;justify-content:center;gap:9px;width:100%;padding:15px;border-radius:12px;font-size:16px;font-weight:800;text-decoration:none;margin-bottom:11px}
+  .btn.pdf{background:var(--red);color:#fff}.btn.tel{background:#0b6bcb;color:#fff}
+  .btn:active{opacity:.85}
+  .gallery{display:flex;flex-direction:column;gap:12px}
+  .gallery figure{margin:0;background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden;box-shadow:var(--shadow)}
+  .gallery img{width:100%;display:block;background:#fff}
+  .gallery figcaption{font-size:13px;color:var(--sub);padding:8px 12px;border-top:1px solid var(--line)}
+
+  .contact{font-size:15px}
+  .contact .row{display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid var(--line)}
+  .contact .row:last-child{border-bottom:0}
+  .contact .k{color:var(--sub);font-weight:700}
+  footer{text-align:center;padding:24px 18px 40px;color:var(--sub);font-size:13px}
+  footer .logo{font-weight:800;color:var(--red);font-size:16px}
+
+  /* ===== 리미트 설정 시뮬레이터 ===== */
+  .seg{display:inline-flex;background:var(--bg);border:1px solid var(--line);border-radius:999px;padding:4px;gap:4px;margin-bottom:12px}
+  .seg button{border:0;background:transparent;padding:9px 20px;border-radius:999px;font-weight:800;font-size:14px;color:var(--sub);cursor:pointer}
+  .seg button.active{background:var(--red);color:#fff}
+  .sim{padding:16px 14px}
+  .sim svg{width:100%;height:auto;display:block;touch-action:manipulation}
+  .polbar{text-align:center;font-size:13.5px;color:var(--sub);margin:2px 0 8px}
+  .polbar b{color:var(--ink)}
+  .statusbar{display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;margin:10px 0 4px;font-weight:800;font-size:14.5px}
+  .statusbar .item{display:flex;align-items:center;gap:7px}
+  .led{width:16px;height:16px;border-radius:50%;background:#cfcfcf;box-shadow:inset 0 0 0 2px rgba(0,0,0,.15)}
+  .led.green{background:#22c55e;box-shadow:0 0 12px #22c55e}
+  .led.red{background:#ef4444;box-shadow:0 0 12px #ef4444}
+  .shaft{color:var(--sub)}.shaft.cw{color:#1a7f37}.shaft.ccw{color:#b91c1c}
+  .narr{background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:12px 13px;font-size:14.5px;line-height:1.55;min-height:52px;margin:12px 0}
+  .narr b{color:var(--red)}
+  .ctrls label{display:block;font-size:14px;font-weight:700;color:var(--sub);margin:4px 0 8px}
+  .ctrls label .cntbadge{color:var(--red);font-size:17px}
+  .ctrls input[type=range]{width:100%;accent-color:var(--red);height:26px}
+  .btns{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-top:6px}
+  .btns button{padding:12px 4px;border:1px solid var(--line);background:var(--card);border-radius:10px;font-weight:800;font-size:14px;color:var(--ink);cursor:pointer}
+  .btns button.primary{background:var(--red);color:#fff;border-color:var(--red)}
+  .btns button:disabled{opacity:.4}
+  .steps{margin:14px 0 0;padding:0;list-style:none;counter-reset:s}
+  .steps li{position:relative;padding:9px 10px 9px 42px;font-size:14px;border-radius:8px;color:var(--sub);counter-increment:s;margin-bottom:2px;transition:.2s}
+  .steps li::before{content:counter(s);position:absolute;left:8px;top:8px;width:24px;height:24px;border-radius:50%;background:var(--line);color:#fff;font-weight:800;font-size:13px;display:flex;align-items:center;justify-content:center}
+  .steps li.on{background:#fff5f6;color:var(--ink);font-weight:700}
+  .steps li.on::before{background:var(--red)}
+  .steps li.done::before{background:var(--ok);content:"✓"}
+  .note{color:var(--sub);font-size:13.5px;margin-top:12px}
+
+  /* ===== 반응형 (태블릿 / PC) ===== */
+  .sidebar{display:none}
+  @media (min-width:640px){
+    .wrap{max-width:860px}
+    section{padding:26px 30px}
+    .cover{margin:22px 30px;padding:30px 24px}
+    .cover h1{font-size:28px}
+    .toc{grid-template-columns:repeat(3,1fr);padding:0 30px}
+    .figbox,.gallery figure{max-width:680px;margin-left:auto;margin-right:auto}
+    #dials{max-width:540px;margin:0 auto}
+    #house{max-width:440px;margin:0 auto}
+    .symbols{grid-template-columns:repeat(2,1fr)}
+  }
+  @media (min-width:1024px){
+    body{padding-left:276px}
+    .wrap{max-width:960px;margin:0 auto}
+    section{padding:30px 40px}
+    h2{font-size:23px}
+    .toc{grid-template-columns:repeat(3,1fr)}
+    .sidebar{display:flex;flex-direction:column;position:fixed;left:0;top:0;bottom:0;width:276px;
+      background:var(--card);border-right:1px solid var(--line);overflow-y:auto;z-index:40;padding:18px 14px}
+    .sidebar .sbrand{font-weight:800;color:var(--red);font-size:16px;padding:6px 10px 14px;border-bottom:1px solid var(--line);margin-bottom:10px;line-height:1.35}
+    .sidebar .sbrand small{display:block;color:var(--sub);font-weight:700;font-size:12px;margin-top:4px}
+    .sidebar a{display:flex;gap:10px;align-items:center;text-decoration:none;color:var(--ink);
+      padding:11px 12px;border-radius:9px;font-weight:700;font-size:14.5px;margin-bottom:2px}
+    .sidebar a .si{font-size:17px;width:22px;text-align:center;flex:0 0 auto}
+    .sidebar a:hover{background:var(--bg)}
+    .sidebar a.on{background:var(--red);color:#fff}
+  }
+  @media (min-width:1280px){
+    .wrap{max-width:1040px}
+    .toc{grid-template-columns:repeat(4,1fr)}
+  }
+
+  /* 그림 번역 범례 */
+  .imgleg{margin:8px 0 0;padding:0;list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:6px 12px;counter-reset:leg}
+  .imgleg li{font-size:12.5px;color:var(--sub);padding-left:23px;position:relative;line-height:1.45;counter-increment:leg}
+  .imgleg li::before{content:counter(leg);position:absolute;left:0;top:0;width:16px;height:16px;border-radius:50%;background:var(--red);color:#fff;font-size:10px;font-weight:800;display:flex;align-items:center;justify-content:center;line-height:1}
+  .imgleg-t{font-size:12.5px;font-weight:800;color:var(--red);margin:10px 0 2px}
+  @media (min-width:640px){.imgleg{grid-template-columns:1fr 1fr 1fr}}
+
+  /* ===== 언어 전환 ===== */
+  .langbar{display:flex;justify-content:center;gap:8px;margin:16px 18px}
+  .langbar button{border:1px solid var(--line);background:var(--card);color:var(--ink);
+    padding:9px 16px;border-radius:999px;font-weight:800;font-size:14px;cursor:pointer;box-shadow:var(--shadow)}
+  .langbar button.on{background:var(--red);color:#fff;border-color:var(--red)}
+  .modal{position:fixed;inset:0;z-index:100;background:rgba(0,0,0,.5);display:none;align-items:center;justify-content:center;padding:24px}
+  .modal.show{display:flex}
+  .modal .box{background:var(--card);color:var(--ink);border-radius:16px;max-width:400px;padding:24px 22px;box-shadow:0 8px 30px rgba(0,0,0,.3);text-align:center}
+  .modal .box .ic{font-size:34px}
+  .modal .box p{font-size:15px;line-height:1.7;margin:12px 0 18px;color:var(--sub)}
+  .modal .box button{background:var(--red);color:#fff;border:0;padding:12px 28px;border-radius:10px;font-weight:800;font-size:15px;cursor:pointer}
+
+  /* ===== 다크 테마 (data-theme=dark: 자동감지 또는 수동토글) ===== */
+  html[data-theme="dark"]{--ink:#eaeaea;--sub:#a8a8a8;--line:#2c2c2e;--bg:#0f0f11;--card:#1a1a1d;color-scheme:dark}
+  html[data-theme="dark"] table.spec th,html[data-theme="dark"] .perf .p .t,html[data-theme="dark"] .kvtbl th{background:#202024}
+  html[data-theme="dark"] .perf .p .v small{color:#9a9a9a}
+  html[data-theme="dark"] .tipbox{background:#0e2338;border-color:#1e3a5f;color:#bcd8f5}
+  html[data-theme="dark"] .tipbox b{color:#e3f0ff}
+  html[data-theme="dark"] .must{background:#0e2338;border-color:#1e3a5f;color:#bcd8f5}
+  html[data-theme="dark"] .steps li.on{background:#2a1416}
+  html[data-theme="dark"] .sim .houseFill{fill:#16161a}
+  /* 다크: 라인아트는 밝은선 버전(JS로 src 교체)이라 흰 배경 제거 */
+  html[data-theme="dark"] .figbox img.lineart{background:transparent}
+
+  /* 한국어에서는 그림 속 명칭 마커·범례 숨김 (원본 라벨이 이미 한글) */
+  html[data-lang="ko"] .partfig .mk{display:none}
+  html[data-lang="ko"] .imgleg-t,
+  html[data-lang="ko"] .imgleg{display:none}
+
+  /* ===== 비밀번호 게이트 · 배포금지 안내 ===== */
+  body.locked{overflow:hidden}
+  #gate{position:fixed;inset:0;z-index:9999;background:linear-gradient(135deg,var(--red),var(--red-d));
+    display:flex;align-items:center;justify-content:center;padding:24px}
+  #gate .gbox{background:#fff;border-radius:18px;padding:30px 22px;max-width:340px;width:100%;text-align:center;box-shadow:0 14px 44px rgba(0,0,0,.35)}
+  #gate .glogo{font-size:13px;font-weight:800;color:var(--red);letter-spacing:1px}
+  #gate .gtitle{font-size:20px;font-weight:800;margin:6px 0 16px;color:#1a1a1a}
+  #gate .gdesc{font-size:14px;color:#555;margin-bottom:16px;line-height:1.55}
+  #gate .gdesc span{display:block;font-size:12px;color:#9a9a9a;margin-top:3px}
+  #gate input{width:100%;font-size:22px;text-align:center;letter-spacing:8px;padding:12px;border:2px solid var(--line);border-radius:10px;margin-bottom:10px;outline:none}
+  #gate input:focus{border-color:var(--red)}
+  #gate button{width:100%;background:var(--red);color:#fff;border:0;padding:13px;border-radius:10px;font-size:16px;font-weight:800;cursor:pointer}
+  #gate .gerr{color:var(--red);font-size:13px;font-weight:700;margin-top:10px;min-height:16px}
+  #notice{position:fixed;inset:0;z-index:9998;background:rgba(0,0,0,.6);display:none;align-items:center;justify-content:center;
+    padding:20px;overflow-y:auto;-webkit-overflow-scrolling:touch}
+  #notice.show{display:flex}
+  #notice .nbox{background:#fff;border-radius:16px;padding:24px 22px;max-width:370px;width:100%;text-align:center;box-shadow:0 14px 44px rgba(0,0,0,.35);
+    margin:auto;max-height:calc(100vh - 40px);max-height:calc(100dvh - 40px);overflow-y:auto}
+  #notice .nic{font-size:36px;line-height:1}
+  #notice .ntitle{font-size:18px;font-weight:800;margin:8px 0 12px;color:var(--red)}
+  #notice .ntext{font-size:14px;color:#333;line-height:1.65}
+  #notice .ntext b{color:var(--red)}
+  #notice .nsub{display:block;margin-top:12px;font-size:11.5px;color:#8a8a8a;line-height:1.45}
+  #notice button{margin-top:20px;width:100%;background:#1a1a1a;color:#fff;border:0;padding:12px;border-radius:10px;font-size:15px;font-weight:800;cursor:pointer}
+  html[data-theme="dark"] #gate .gbox,html[data-theme="dark"] #notice .nbox{background:#1a1a1d}
+  html[data-theme="dark"] #gate .gtitle{color:#eee}
+  html[data-theme="dark"] #notice .ntext{color:#ddd}
+  html[data-theme="dark"] #gate input{background:#0f0f11;color:#eee;border-color:#2c2c2e}
+</style>
+<script>
+/* 렌더 전 테마 적용(깜빡임 방지) */
+(function(){try{var t=localStorage.getItem('wsm-theme');if(t!=='light'&&t!=='dark')t=(window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches)?'dark':'light';document.documentElement.setAttribute('data-theme',t);}catch(e){document.documentElement.setAttribute('data-theme','light');}})();
+</script>
+</head>
+<body>
+<!-- ===== 비밀번호 게이트 ===== -->
+<div id="gate" data-notrans>
+  <div class="gbox">
+    <div class="glogo">◤ 롤업스타 · WSM-6035</div>
+    <div class="gtitle">전동개폐기 사용설명서</div>
+    <div class="gdesc">열람하려면 비밀번호를 입력하세요.
+      <span>Enter password to view · パスワードを入力</span></div>
+    <input id="gpw" type="password" inputmode="numeric" maxlength="8" placeholder="비밀번호" autocomplete="off" aria-label="비밀번호">
+    <button id="gbtn" type="button">확인</button>
+    <div id="gerr" class="gerr"></div>
+  </div>
+</div>
+<!-- ===== 배포금지 안내 ===== -->
+<div id="notice" data-notrans>
+  <div class="nbox">
+    <div class="nic">⚠️</div>
+    <div class="ntitle">배포 금지 안내</div>
+    <div class="ntext">본 자료는 <b>(주)우성하이텍</b>의 자산입니다.<br>
+      무단 <b>복제·배포·전송·게시</b>를 금지하며, 허가 없이 외부로 공유할 수 없습니다.<br>
+      승인된 사용자 열람용으로만 제공됩니다.
+      <span class="nsub">This manual is proprietary to Woosung Hitec (WSH).<br>Unauthorized copying, distribution or posting is prohibited.<br>本資料の無断配布・複製を禁止します。</span></div>
+    <button id="nbtn" type="button">확인했습니다</button>
+  </div>
+</div>
+<script>
+(function(){
+  var PW='6035';
+  var gate=document.getElementById('gate'), notice=document.getElementById('notice');
+  try{localStorage.removeItem('wsm-auth');}catch(e){} /* 이전 영구저장 정리 */
+  var authed=false; try{authed=sessionStorage.getItem('wsm-auth')==='1';}catch(e){}
+  function showNoticeMaybe(){
+    var seen=false; try{seen=sessionStorage.getItem('wsm-notice')==='1';}catch(e){}
+    if(!seen){ notice.classList.add('show'); document.body.classList.add('locked'); }
+    else{ document.body.classList.remove('locked'); }
+  }
+  function openManual(){ gate.style.display='none'; showNoticeMaybe(); }
+  if(authed){ openManual(); }
+  else{ document.body.classList.add('locked'); }
+  var pw=document.getElementById('gpw'), btn=document.getElementById('gbtn'), err=document.getElementById('gerr');
+  function submit(){
+    if((pw.value||'').trim()===PW){
+      try{sessionStorage.setItem('wsm-auth','1');}catch(e){}
+      openManual();
+    }else{
+      err.textContent='비밀번호가 올바르지 않습니다.';
+      pw.value=''; pw.focus();
+    }
+  }
+  if(btn) btn.addEventListener('click',submit);
+  if(pw) pw.addEventListener('keydown',function(e){ if(e.key==='Enter'){ e.preventDefault(); submit(); } });
+  var nbtn=document.getElementById('nbtn');
+  if(nbtn) nbtn.addEventListener('click',function(){ notice.classList.remove('show'); document.body.classList.remove('locked'); try{sessionStorage.setItem('wsm-notice','1');}catch(e){} });
+  if(!authed && pw){ setTimeout(function(){ try{pw.focus();}catch(e){} },120); }
+})();
+</script>
+<aside id="sidebar" class="sidebar"></aside>
+<div class="wrap">
+
+  <div class="appbar">
+    <button id="homeBtn" class="abtn">☰ 목차</button>
+    <div class="abtitle" id="abTitle" data-notrans>WSM-6035</div>
+    <div class="abpage" id="abPage" data-notrans></div>
+    <button id="themeBtn" class="abtn" aria-label="다크/라이트 전환">🌙</button>
+  </div>
+
+  <!-- ===== 홈(목차) ===== -->
+  <div class="page" id="home">
+    <div class="cover">
+      <div class="brand">◤ 롤업스타™ · WSH 우성하이텍</div>
+      <h1>전동개폐기 사용설명서</h1>
+      <div class="model">모델 WSM-6035</div>
+      <img class="coverimg" src="img/product_ln.png" alt="WSM-6035 전동개폐기">
+    </div>
+    <div class="langbar" id="langbar" data-notrans>
+      <button data-lang="ko" class="on">한국어</button>
+      <button data-lang="ja">日本語</button>
+      <button data-lang="en">English</button>
+    </div>
+    <div class="toc" id="toc"></div>
+    <p class="note" style="text-align:center">원하는 항목을 눌러 이동하세요. 페이지는 <b>좌우로 밀거나(스와이프)</b> 아래 <b>이전/다음</b> 버튼으로 넘길 수 있습니다.</p>
+  </div>
+
+  <!-- ===== 1. 안전 ===== -->
+  <section id="safe">
+    <h2><span class="bar"></span>Ⅰ. 안전을 위한 주의사항</h2>
+    <p class="lead">아래 안전 주의사항은 제품을 안전하고 정확하게 사용하여 예기치 못한 위험이나 손해를 사전에 방지하기 위한 것입니다.</p>
+
+    <div class="symbols">
+      <div class="s"><span class="em">⚠️</span><div><b>경고</b><br>지키지 않으면 사용자가 <b>사망하거나 중상</b>을 입을 수 있습니다.</div></div>
+      <div class="s"><span class="em">⚠️</span><div><b>주의</b><br>지키지 않으면 <b>부상·재산피해</b>가 발생할 수 있습니다.</div></div>
+      <div class="s"><span class="em">❗</span><div><b>필수</b><br>위험을 피하기 위해 주의 깊게 살펴보고 <b>반드시 따라야</b> 하는 사항.</div></div>
+      <div class="s"><span class="em">🚫</span><div><b>금지</b><br>위험을 방지하기 위해 <b>피해야 하는</b> 사용방법.</div></div>
+    </div>
+
+    <div class="subh">⚠️ 경고</div>
+    <div class="alert danger"><span class="ic">⚡</span><div><b>교류(AC) 전기에 연결하지 마십시오.</b> 본 제품은 <b>DC 24V 전용</b>입니다. AC 220V 연결 시 순식간에 모터가 소손되며 화재·감전의 원인이 됩니다.</div></div>
+    <div class="alert danger"><span class="ic">🔌</span><div>설치·수리 작업 시에는 <b>전원을 차단</b>하십시오. 감전의 위험이 있습니다.</div></div>
+    <div class="alert danger"><span class="ic">🔩</span><div>너트가 저절로 풀리지 않도록 <b>단단히 조여</b> 주십시오. 사람이 다칠 수 있습니다.</div></div>
+    <div class="alert danger"><span class="ic">🧒</span><div>어린이가 작동범위 근처에서 놀거나 만지지 않게 하십시오. 손·옷이 개폐 축에 휘감겨 다치거나 감전될 수 있습니다.</div></div>
+    <div class="alert danger"><span class="ic">🌀</span><div>개폐 축이 지면 위에 떠 있는 상태에서는 <b>절대로 개폐 축에서 전동개폐기를 분리하지 마십시오.</b> 감긴 피복재가 풀리며 축이 급격히 굴러 떨어져 사람이 다칠 수 있습니다.</div></div>
+    <div class="alert danger"><span class="ic">〰️</span><div>전선 피복상태와 연결상태를 양호하게 유지하십시오. 제품 손상·감전의 원인이 됩니다.</div></div>
+
+    <div class="subh">⚠️ 주의</div>
+    <div class="alert caution"><span class="ic">📦</span><div>제품을 던지거나 떨어뜨려 <b>충격을 주지</b> 마십시오. 내부 부품이 손상됩니다.</div></div>
+    <div class="alert caution"><span class="ic">💧</span><div>물·액체 속에 넣지 마십시오. <b>완전방수가 아닙니다.</b> 빗물받이 밑, 지면에 닿는 위치, 물이 고이는 곳에 설치하지 마십시오. 내부 침수 시 고장납니다.</div></div>
+    <div class="alert caution"><span class="ic">📏</span><div>개폐 축(말대)이 <b>휘거나 굽지 않게</b> 곧은 상태로 유지·설치하십시오. 휘면 과부하로 고장납니다.</div></div>
+    <div class="alert caution"><span class="ic">🔥</span><div>연속작동 시간 및 <b>최대허용 성능(전류·토크)을 초과</b>하여 작동시키지 마십시오. 화재·제품손상의 원인이 됩니다.</div></div>
+    <div class="alert caution"><span class="ic">⛈️</span><div>낙뢰로 제품손상이 우려될 때는 <b>전원을 차단</b>하십시오.</div></div>
+    <div class="alert caution"><span class="ic">🍃</span><div>개폐 축이 회전할 때 <b>이물질이 피복재와 함께 휘감기지</b> 않게 하십시오. 제품·제어기 고장, 구조물 손상의 원인이 됩니다.</div></div>
+    <div class="alert caution"><span class="ic">🛡️</span><div>설정 후에는 반드시 <b>리미트 안전커버를 정확히 덮어</b> 주십시오. 빗물이 내부로 들어가면 고장납니다.</div></div>
+
+    <details class="acc"><summary>원본 안전 그림 보기 (설명서 3~4p)</summary><div class="accbody">
+      <figure class="figbox"><img class="lineart" src="img/safety_warn.png" data-dark="img/safety_warn_dark.png" alt="경고 안전 그림" loading="lazy"><figcaption>⚠️ 경고 — 설치할 때 / 사용할 때</figcaption></figure>
+      <figure class="figbox"><img class="lineart" src="img/safety_caution.png" data-dark="img/safety_caution_dark.png" alt="주의 안전 그림" loading="lazy"><figcaption>⚠️ 주의 — 설치할 때 / 사용할 때</figcaption></figure>
+    </div></details>
+  </section>
+
+  <!-- ===== 2. 사양 ===== -->
+  <section id="spec">
+    <h2><span class="bar"></span>Ⅱ. 제품 사양 및 성능</h2>
+    <p class="lead">본 제품은 두꺼운 <b>비닐필름 피복재 개폐 전용</b>입니다.</p>
+    <div class="card">
+      <table class="spec">
+        <tr><th>입력전압</th><td><b>DC 24V</b> (±10% 이내)</td></tr>
+        <tr><th>감속비</th><td>1/785</td></tr>
+        <tr><th>감속방식</th><td>1차 헬리컬 기어 / 2차 유성기어</td></tr>
+        <tr><th>제동기능</th><td>셀프 브레이크(Self Brake)</td></tr>
+        <tr><th>회전방향</th><td>양방향 (전기 극성으로 변경)</td></tr>
+        <tr><th>리미트 방식</th><td>2개 다이얼 돌기에 의한 스위치 작동</td></tr>
+        <tr><th>리미트 설정</th><td>조정 노브(Knob)를 돌려서 설정 · 최대 35회전</td></tr>
+        <tr><th>밀폐 상태</th><td>빗물유입 방지 (완전방수 아님)</td></tr>
+        <tr><th>통기 방식</th><td>리미트 커버에 통기구멍</td></tr>
+        <tr><th>몸체 / 기어</th><td>알루미늄 합금 / SCM415(침탄 열처리)</td></tr>
+        <tr><th>외관도장</th><td>분체 도장</td></tr>
+        <tr><th>전원표시</th><td>LED (2컬러 발광 다이오드)</td></tr>
+        <tr><th>전원공급선</th><td>VCTF 1.0×2C (갈색·녹색)</td></tr>
+        <tr><th>무게(본체)</th><td>2.8 Kg</td></tr>
+      </table>
+    </div>
+
+    <div class="subh">성능 데이터</div>
+    <div class="perf">
+      <div class="p"><div class="t">무부하</div><div class="v">1.0A</div><div class="v"><small>토크</small> 0</div><div class="v"><small>4.5RPM</small></div></div>
+      <div class="p mark"><div class="t">표준사용 ★</div><div class="v">3.5A</div><div class="v"><small>토크</small> 6kg·m</div><div class="v"><small>4RPM</small></div></div>
+      <div class="p"><div class="t">최대허용</div><div class="v">5A</div><div class="v"><small>토크</small> 9kg·m</div><div class="v"><small>3.7RPM</small></div></div>
+    </div>
+    <div class="tipbox">⏱ <b>연속 작동시간</b> — 표준사용 30분 이내 / 최대허용 5분 이내<br>
+    💡 <b>토크</b>란 회전시키는 힘. 표준 6kg·m = 회전축 중심에서 1m 떨어진 지점에 6kg을 매달고 1분에 4회전 시킬 수 있는 힘(이때 소비전류 약 3.5A).</div>
+
+    <div class="subh">취급 시 주의사항</div>
+    <div class="subh2">1) 설치할 때</div>
+    <ul class="bullet">
+      <li>전원공급 전선을 잡아당기거나 전선을 잡고 들어 올리지 마십시오.</li>
+      <li>전선 연결부위가 합선·누전되지 않게 설치하십시오.</li>
+    </ul>
+    <div class="subh2">2) 사용 중에</div>
+    <ul class="bullet">
+      <li>정격전압(DC 24V)을 사용하십시오.</li>
+      <li>최대허용 성능(전류·토크)을 초과하여 사용하지 마십시오.</li>
+      <li>연속작동 사용시간을 지키십시오.</li>
+      <li>제품이 지면에 닿지 않게 하십시오. 빗물 고인 곳에 닿으면 물이 유입됩니다.</li>
+      <li>리미트 설정 후에는 반드시 안전커버를 닫아 빗물이 들어가지 않게 하십시오.</li>
+      <li>작동 중 소음이 심하면 운전을 중지하고 점검하십시오.</li>
+    </ul>
+    <div class="subh2">3) 점검 및 보관</div>
+    <ul class="bullet">
+      <li>점검을 위해 분리할 때는 먼저 전원 공급을 차단하십시오.</li>
+      <li>볼트·너트 등 소모성 부품을 점검하여 파손 전에 새것으로 교환하십시오.</li>
+      <li>물(액체)에 넣거나 습기가 많은 장소에 보관하지 마십시오.</li>
+    </ul>
+  </section>
+
+  <!-- ===== 3. 명칭 ===== -->
+  <section id="parts">
+    <h2><span class="bar"></span>Ⅲ. 각부 명칭</h2>
+    <div class="subh">외부 명칭</div>
+    <figure class="figbox"><div class="partfig"><img class="lineart" src="img/parts_ext.png" data-dark="img/parts_ext_dark.png" alt="전동개폐기 외부 명칭 (그림2-1)" loading="lazy"><span class="mk" style="left:49.4%;top:4.2%" data-notrans>1</span><span class="mk" style="left:23.6%;top:3.7%" data-notrans>2</span><span class="mk" style="left:30.9%;top:19.2%" data-notrans>3</span><span class="mk" style="left:2.4%;top:30.2%" data-notrans>4</span><span class="mk" style="left:18.2%;top:57.9%" data-notrans>5</span><span class="mk" style="left:15.1%;top:73.4%" data-notrans>6</span><span class="mk" style="left:36%;top:87.6%" data-notrans>7</span><span class="mk" style="left:76.2%;top:42.9%" data-notrans>8</span><span class="mk" style="left:79%;top:50.4%" data-notrans>9</span><span class="mk" style="left:83.8%;top:58.9%" data-notrans>10</span><span class="mk" style="left:82%;top:65.6%" data-notrans>11</span><span class="mk" style="left:67.1%;top:70.9%" data-notrans>12</span><span class="mk" style="left:59.8%;top:84.1%" data-notrans>13</span></div><figcaption>전동개폐기 외부 명칭 (그림2-1)</figcaption></figure>
+    <div class="imgleg-t">그림 속 명칭</div>
+    <ul class="imgleg">
+      <li>전동모터 (DC24V)</li>
+      <li>개폐 축 커플링</li>
+      <li>출력축</li>
+      <li>개폐 축 고정볼트</li>
+      <li>커플링 고정볼트</li>
+      <li>가이드 암 커플링 체결 홀</li>
+      <li>가이드 암 커플링 삽입부</li>
+      <li>LED (전원표시)</li>
+      <li>안전커버</li>
+      <li>전기 공급선</li>
+      <li>통기구</li>
+      <li>리미트 설정 노브 (녹색)</li>
+      <li>리미트 설정 노브 (적색)</li>
+    </ul>
+
+    <div class="subh">기본 제공 부품</div>
+    <div class="card">
+      <div class="subh2" style="margin-top:0">① 개폐 축 커플링 세트 (황색도금)</div>
+      <ul class="bullet" style="margin-top:2px">
+        <li>커플링 1개 (25∅용)</li>
+        <li>커플링 고정볼트 1개 (M8×16mm)</li>
+        <li>개폐 축 고정볼트 2개 (M8×16mm)</li>
+      </ul>
+      <div class="subh2">② 가이드 암 커플링 세트 (은색도금)</div>
+      <ul class="bullet" style="margin-top:2px">
+        <li>커플링 1개 (25∅용)</li>
+        <li>볼트 1개 (M6×55mm) / 너트 1개 (M6mm)</li>
+        <li>볼트 1개 (M8×16mm)</li>
+      </ul>
+      <div class="subh2">③ 가이드 암 선회 축 부품</div>
+      <ul class="bullet" style="margin-top:2px">
+        <li>선회 축 고정 홀더</li>
+        <li>선회 축 볼트(너트 포함)</li>
+        <li>가이드 암 핀 (기본 32∅용) <span style="color:var(--sub)">※19∅용으로 변경 주문 가능</span></li>
+      </ul>
+    </div>
+    <div class="tipbox">🛒 <b>편리부품(별도판매)</b> — 가이드 롤러 세트(본 제품 전용 / 범용, 궤도 25∅), 전선연결부 보호함 &amp; 클립 세트, 비닐보호 튜브(내경 25∅·22∅). 제품과 함께 제공되지 않습니다.</div>
+  </section>
+
+  <!-- ===== 4. 설치 ===== -->
+  <section id="install">
+    <h2><span class="bar"></span>Ⅳ. 설치방법</h2>
+    <p class="lead">원예시설 형태는 매우 다양하며 설치방법도 다양합니다. 아래는 대표적인 방법의 <b>[예]</b>이며, 자세한 것은 원예시설 자동화 전문업체와 상담하여 현장에 알맞게 설치하십시오.</p>
+    <figure class="figbox"><div class="partfig"><img class="lineart" src="img/inst_overview.png" data-dark="img/inst_overview_dark.png" alt="설치 개요" loading="lazy"><span class="mk" style="left:90.2%;top:53.7%" data-notrans>1</span><span class="mk" style="left:83.8%;top:80.7%" data-notrans>2</span><span class="mk" style="left:3.8%;top:89.5%" data-notrans>3</span><span class="mk" style="left:72.1%;top:91.2%" data-notrans>4</span></div><figcaption>설치 개요 · 천장 곡부용(가이드 암) / 측면용(가이드 롤러)</figcaption></figure>
+    <div class="imgleg-t">그림 속 명칭</div>
+    <ul class="imgleg">
+      <li>피복재</li>
+      <li>개폐 축</li>
+      <li>천장 곡부용 전동개폐기 (가이드 암 방식)</li>
+      <li>측면용 전동개폐기 (가이드 롤러 방식)</li>
+    </ul>
+
+    <div class="subh">1. 롤-업-다운(ROLL-UP-DOWN) 개폐방식</div>
+    <p style="font-size:14.5px">구조물(들보)에 피복재 상단을 고정하고 하단을 개폐 축에 감아 클립으로 고정합니다. 전동개폐기로 개폐 축을 회전시키면 피복재가 감기며 <b>환기구가 열리고</b>, 반대로 돌리면 풀리며 <b>닫힙니다</b>. 이때 피복재가 반대로 풀리려는 힘이 작용하므로, 이를 받쳐주는 <b>가이드 암</b> 또는 <b>가이드 롤러</b>를 사용해 설치합니다.</p>
+
+    <details class="acc">
+      <summary>1) 가이드 암을 사용하여 설치 (자세히)</summary>
+      <div class="accbody">
+        <p style="font-size:14px"><b>기능</b> — 개폐 축에 감긴 피복재가 반대로 풀리려는 힘을 가이드 암이 받쳐 풀리지 않게 합니다.</p>
+        <div class="alert danger"><span class="ic">⚠️</span><div>개폐 축이 피복재를 감고 떠 있을 때는 <b>절대 가이드 암·전동개폐기를 개폐 축에서 분리하지 마십시오.</b> 피복재가 풀리며 급격히 지면으로 떨어져 다칠 수 있습니다.</div></div>
+        <p style="font-size:14px"><b>길이 변화</b> — 닫혔을 때는 짧아지고 열렸을 때는 길어지므로, 길이가 쉽게 늘고 줄도록 <b>곧은 파이프</b>를 사용합니다.</p>
+        <ul class="bullet">
+          <li>가이드 암은 규격이 다른 2개 파이프로 구성 — <b>겉대 내경 29∅(외경 32∅)</b>, <b>속대 외경 25.4∅(내경 22.4∅)</b></li>
+          <li>최대 길이에서도 속대가 겉대 속에서 완전히 빠지지 않게 길이를 맞춤</li>
+          <li>최대 길이에서 전선이 당겨지지 않도록 여유 있게 연결</li>
+          <li>전동개폐기 무게로 피복재가 처지지 않게 <b>보조밴드</b> 설치</li>
+        </ul>
+        <figure class="figbox"><div class="partfig"><img class="lineart" src="img/inst_arm.png" data-dark="img/inst_arm_dark.png" alt="가이드 암 조립도" loading="lazy"><span class="mk" style="left:14%;top:10.2%" data-notrans>1</span><span class="mk" style="left:37.7%;top:4.7%" data-notrans>2</span><span class="mk" style="left:8.3%;top:18.2%" data-notrans>3</span><span class="mk" style="left:71%;top:14.7%" data-notrans>4</span><span class="mk" style="left:71%;top:21.2%" data-notrans>5</span><span class="mk" style="left:71.2%;top:27.5%" data-notrans>2</span><span class="mk" style="left:71%;top:36%" data-notrans>6</span><span class="mk" style="left:71.2%;top:44%" data-notrans>7</span><span class="mk" style="left:71%;top:52%" data-notrans>8</span><span class="mk" style="left:12.5%;top:54%" data-notrans>9</span><span class="mk" style="left:17.2%;top:60.7%" data-notrans>10</span><span class="mk" style="left:21.5%;top:68.2%" data-notrans>11</span><span class="mk" style="left:33.5%;top:78.7%" data-notrans>12</span><span class="mk" style="left:48%;top:87.5%" data-notrans>13</span><span class="mk" style="left:52.7%;top:95.7%" data-notrans>14</span><span class="mk" style="left:91.5%;top:82.7%" data-notrans>15</span><span class="mk" style="left:91.5%;top:90%" data-notrans>16</span></div><figcaption>가이드 암 조립도 · 겉대 32∅ + 속대 25.4∅ 신축 파이프로 개폐 축을 받쳐 줌</figcaption></figure>
+        <div class="imgleg-t">그림 속 명칭</div>
+        <ul class="imgleg">
+          <li>커플링 고정볼트 (M8×16mm)</li>
+          <li>개폐 축 고정볼트 (M8×16mm)</li>
+          <li>전동개폐기</li>
+          <li>개폐 축</li>
+          <li>커플링</li>
+          <li>가이드 암 커플링 체결 볼트 (M6×55mm)</li>
+          <li>가이드 암 고정볼트 (M8×16mm)</li>
+          <li>가이드 암 커플링</li>
+          <li>전기 공급선</li>
+          <li>너트 (6mm)</li>
+          <li>가이드 암 속대 (외경 25.4Ø / 내경 22.4Ø)</li>
+          <li>가이드 암 겉대 (외경 32Ø / 내경 29Ø)</li>
+          <li>가이드 암 핀 (외경 32Ø용)</li>
+          <li>선회 축 볼트 (⅜″×125mm)</li>
+          <li>기둥 (지주)</li>
+          <li>선회 축 홀더</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="acc">
+      <summary>2) 가이드 롤러를 사용하여 설치 (자세히)</summary>
+      <div class="accbody">
+        <p style="font-size:14px">가이드 롤러(궤도)로 개폐 축을 지지하는 방식이며, 롤러 지름에 따라 1회전당 개폐량이 달라집니다.</p>
+        <div class="tipbox">📐 <b>1회 회전 개폐량 = 롤러 지름 × 3.14</b> (원주)<br>예) 롤러 지름 3cm → 3×3.14 = <b>9.42cm</b>. 즉 1회전에 피복재가 9.42cm 열립니다.</div>
+        <figure class="figbox"><div class="partfig"><img class="lineart" src="img/inst_roller.png" data-dark="img/inst_roller_dark.png" alt="가이드 롤러 설치도" loading="lazy"><span class="mk" style="left:12.3%;top:9.7%" data-notrans>1</span><span class="mk" style="left:4.2%;top:22.9%" data-notrans>2</span><span class="mk" style="left:4.3%;top:42.9%" data-notrans>3</span><span class="mk" style="left:4.9%;top:71.9%" data-notrans>4</span><span class="mk" style="left:14.2%;top:82.2%" data-notrans>5</span><span class="mk" style="left:39.8%;top:70.6%" data-notrans>3</span><span class="mk" style="left:41.3%;top:90.7%" data-notrans>5</span><span class="mk" style="left:89.2%;top:64.6%" data-notrans>6</span><span class="mk" style="left:86.9%;top:73%" data-notrans>7</span><span class="mk" style="left:78.2%;top:81.4%" data-notrans>8</span><span class="mk" style="left:70.5%;top:88.8%" data-notrans>1</span></div><figcaption>가이드 롤러 설치도 · 1회전 개폐량 = 지름 × 3.14</figcaption></figure>
+        <div class="imgleg-t">그림 속 명칭</div>
+        <ul class="imgleg">
+          <li>가이드 롤러 (네오스타 전용)</li>
+          <li>고정볼트</li>
+          <li>전동개폐기</li>
+          <li>고정너트</li>
+          <li>궤도</li>
+          <li>피복재</li>
+          <li>개폐 축</li>
+          <li>보조밴드</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="acc">
+      <summary>2. 로프 예인 개폐방식 (자세히)</summary>
+      <div class="accbody">
+        <p style="font-size:14px">피복재 한쪽을 로프로 묶어 구동축에 감거나 풀어 여닫는 방식으로, 주로 측면 피복재 개폐에 사용합니다. 골조파이프에 베어링으로 구동축을 설치하고, 롤러(도르래)를 통과한 로프를 구동축에 고정한 뒤 회전시키면 로프가 감기며 환기구가 닫히고, 반대로 돌리면 열립니다.</p>
+        <div class="tipbox">무겁거나 두꺼운 피복재는 <b>용량이 큰 보온재용 전동개폐기</b>를 사용하십시오. 자세한 사항은 시공 전문가와 상담하십시오.</div>
+        <figure class="figbox"><div class="partfig"><img class="lineart" src="img/inst_rope.png" data-dark="img/inst_rope_dark.png" alt="로프 예인 방식" loading="lazy"><span class="mk" style="left:29.7%;top:19.2%" data-notrans>1</span><span class="mk" style="left:9.7%;top:30.7%" data-notrans>2</span><span class="mk" style="left:12%;top:37.1%" data-notrans>3</span><span class="mk" style="left:81.6%;top:44.5%" data-notrans>4</span><span class="mk" style="left:2%;top:56.4%" data-notrans>5</span><span class="mk" style="left:9.9%;top:66.4%" data-notrans>6</span><span class="mk" style="left:5%;top:81.9%" data-notrans>7</span></div><figcaption>로프 예인 방식 · 구동축에 감긴 로프가 도르래를 거쳐 피복재를 여닫음</figcaption></figure>
+        <div class="imgleg-t">그림 속 명칭</div>
+        <ul class="imgleg">
+          <li>베어링</li>
+          <li>구동 축</li>
+          <li>롤러</li>
+          <li>비닐 피복재</li>
+          <li>전동개폐기</li>
+          <li>로프</li>
+          <li>고정기둥</li>
+        </ul>
+      </div>
+    </details>
+  </section>
+
+  <!-- ===== 5. 전원·회전 ===== -->
+  <section id="power">
+    <h2><span class="bar"></span>Ⅴ. 전원 연결 · 회전방향</h2>
+    <div class="alert danger"><span class="ic">⚡</span><div>본 전동개폐기는 <b>DC 24V 전용</b>입니다. 가정용 <b>AC 220V를 직접 연결하면 순식간에 모터가 소손</b>됩니다. 절대 직접 입력하지 마십시오.</div></div>
+    <p class="lead">전선 극성에 따라 회전방향이 바뀌고 LED 색이 달라집니다.</p>
+    <div class="dir">
+      <div class="d cw"><div class="big">↻ 시계방향</div><div class="row">청색선 <b>＋</b></div><div class="row">갈색선 <b>－</b></div><div class="row">LED 🟢 <b>녹색</b></div></div>
+      <div class="d ccw"><div class="big">↺ 반시계방향</div><div class="row">청색선 <b>－</b></div><div class="row">갈색선 <b>＋</b></div><div class="row">LED 🔴 <b>적색</b></div></div>
+    </div>
+    <div class="tipbox">🔋 정전 또는 컨트롤러 고장 시 <b>DC 24V 배터리</b>로 작동 가능. 자동차용 12V 배터리 <b>2개를 직렬</b>로 연결해야 24V가 됩니다. (DC 12V만 쓰면 속도·힘이 절반으로 줄고 모터가 손상될 수 있음)</div>
+
+    <div class="subh">컨트롤러 출력단자 극성</div>
+    <p style="font-size:14.5px">당사 컨트롤러는 운전스위치 위치에 따라 단자 극성이 바뀝니다.</p>
+    <table class="kvtbl">
+      <tr><th>운전스위치</th><th>왼쪽 단자</th><th>오른쪽 단자</th></tr>
+      <tr><td>열림</td><td>＋극</td><td>－극</td></tr>
+      <tr><td>닫힘</td><td>－극</td><td>＋극</td></tr>
+    </table>
+    <p class="note">※ 타사 컨트롤러는 극성이 다를 수 있으니 해당 설명서를 참고해 극성을 미리 숙지하십시오.</p>
+
+    <div class="subh">좌측용 · 우측용 구분</div>
+    <p style="font-size:14.5px">전동개폐기는 설치 위치(좌/우)에 따라 개폐 축 회전방향이 달라, 좌·우에 <b>전기극성을 반대로</b> 공급해야 합니다. (아래는 <b>보는 방향</b> 기준)</p>
+    <table class="kvtbl">
+      <tr><th></th><th>열림 시 회전</th><th>청색선</th><th>갈색선</th></tr>
+      <tr><td><b>좌측용</b></td><td>시계방향 ↻</td><td>왼쪽 단자</td><td>오른쪽 단자</td></tr>
+      <tr><td><b>우측용</b></td><td>반시계 ↺</td><td>오른쪽 단자</td><td>왼쪽 단자</td></tr>
+    </table>
+  </section>
+
+  <!-- ===== 6. 리미트 원리 ===== -->
+  <section id="limit-principle">
+    <h2><span class="bar"></span>Ⅵ. 리미트 설정부 알기</h2>
+    <figure class="figbox"><div class="partfig"><img class="lineart" src="img/dial_name.png" data-dark="img/dial_name_dark.png" alt="리미트 설정부 명칭" loading="lazy"><span class="mk" style="left:50.3%;top:20.2%" data-notrans>1</span><span class="mk" style="left:78.7%;top:24.9%" data-notrans>2</span><span class="mk" style="left:2.5%;top:43.1%" data-notrans>3</span><span class="mk" style="left:2.7%;top:53.8%" data-notrans>4</span><span class="mk" style="left:78.6%;top:54%" data-notrans>5</span><span class="mk" style="left:78.6%;top:64.6%" data-notrans>6</span><span class="mk" style="left:78.7%;top:73.5%" data-notrans>7</span><span class="mk" style="left:78.8%;top:82.9%" data-notrans>8</span><span class="mk" style="left:30.5%;top:93.8%" data-notrans>9</span><span class="mk" style="left:54.2%;top:93.3%" data-notrans>10</span></div><figcaption>리미트 설정부 명칭 (그림5-2)</figcaption></figure>
+    <div class="imgleg-t">그림 속 명칭</div>
+    <ul class="imgleg">
+      <li>모터쪽 (방향)</li>
+      <li>LED 표시</li>
+      <li>스위치 롤러</li>
+      <li>다이얼 돌기</li>
+      <li>화살표시</li>
+      <li>설정 노브</li>
+      <li>회전 숫자</li>
+      <li>회전수 눈금</li>
+      <li>적색 다이얼</li>
+      <li>녹색 다이얼</li>
+    </ul>
+
+    <div class="subh">리미트를 설정하는 목적</div>
+    <p style="font-size:14.5px">피복재가 열리고 닫히는 총 범위를 <b>개폐 폭</b>이라 하며, 상단 정지 위치를 <b>열림 한계점</b>, 하단 정지 위치를 <b>닫힘 한계점</b>이라 합니다. 전기가 계속 공급되어도 한계점에 도달하면 스스로 정지되도록, 리미트 스위치부에 <b>구동축 회전수를 설정</b>하는 것입니다. <span style="color:var(--sub)">(리미트=한계·경계·한도)</span></p>
+
+    <div class="subh">리미트 스위치의 원리</div>
+    <ul class="bullet">
+      <li>적색·녹색 다이얼은 구동축과 <b>기어로 연결</b>되어 있습니다.</li>
+      <li>설정 노브를 <b>눌러 잡으면</b> 기어 연결이 해제되어 다이얼을 돌려 설정할 수 있습니다.</li>
+      <li>다이얼 화살표 끝의 <b>돌기</b>가 스위치 롤러를 누르면 작동이 정지됩니다. — <b style="color:#b91c1c">적색 LED</b>일 때는 적색 돌기가, <b style="color:#1a7f37">녹색 LED</b>일 때는 녹색 돌기가 롤러를 눌러야 정지.</li>
+      <li>설정 후 노브에서 손을 떼면 다이얼이 다시 구동축과 기어 연결됩니다.</li>
+    </ul>
+
+    <div class="subh">LED (전원표시)</div>
+    <ul class="bullet">
+      <li>DC 24V가 공급되면 LED가 점등(ON)되며, 작동이 정지되어도 점등됩니다.</li>
+      <li>갈색선 <b>＋</b> · 청색선 <b>－</b> → <b style="color:#b91c1c">적색</b> 점등</li>
+      <li>갈색선 <b>－</b> · 청색선 <b>＋</b> → <b style="color:#1a7f37">녹색</b> 점등</li>
+    </ul>
+
+    <div class="subh">설정 전 숙지사항</div>
+    <div class="tipbox">🛠 안전커버 중앙 하단부를 살짝 들어 올려 열면 2개(적색·녹색) 설정 노브가 있습니다. 노브를 누른 상태에서 <b>+형 드라이버 또는 손</b>으로 돌려 설정합니다. <b>설정 후에는 반드시 안전커버를 닫아야</b> 빗물 유입을 막습니다.</div>
+  </section>
+
+  <!-- ===== 7. 리미트 설정 시뮬레이터 ===== -->
+  <section id="limit">
+    <h2><span class="bar"></span>Ⅶ. 리미트 설정하기 (실습)</h2>
+    <p class="lead">2개 다이얼로 개폐 폭을 설정합니다. 아래 시뮬레이터로 직접 눌러보며 원리를 익혀보세요.</p>
+
+    <div class="seg" id="sideSeg">
+      <button data-side="left" class="active">좌측용</button>
+      <button data-side="right">우측용</button>
+    </div>
+
+    <div class="sim card">
+      <svg id="house" viewBox="-30 0 420 158" aria-label="개폐 폭">
+        <line x1="24" y1="140" x2="336" y2="140" stroke="#bbb" stroke-width="2"/>
+        <path class="houseFill" d="M52 140 V72 Q180 20 308 72 V140 Z" fill="#f5f6f8" stroke="#c9c9cf" stroke-width="2"/>
+        <line x1="180" y1="26" x2="180" y2="140" stroke="#e2e2e6" stroke-width="1.5"/>
+        <line id="hwall" x1="290" y1="55" x2="290" y2="134" stroke="#c9c9cf" stroke-width="1.5"/>
+        <rect id="film" x="291" y="55" width="17" height="79" fill="#7fb3ff" opacity=".85"/>
+        <rect id="roll" x="286" y="130" width="27" height="8" rx="4" fill="#37507a"/>
+        <text id="lblOpen" x="314" y="52" font-size="10" fill="#1a7f37" font-weight="700">열림 한계점</text>
+        <text id="lblClose" x="314" y="140" font-size="10" fill="#b91c1c" font-weight="700">닫힘 한계점</text>
+        <g id="gapDim" opacity="0">
+          <line id="gapLine" x1="330" y1="134" x2="330" y2="134" stroke="var(--red)" stroke-width="1.5"/>
+          <text id="gapTxt" x="333" y="100" font-size="11" fill="var(--red)" font-weight="800">개폐 폭</text>
+        </g>
+      </svg>
+
+      <div class="polbar" id="polbar" data-notrans></div>
+      <div class="statusbar">
+        <span class="item"><span id="led" class="led"></span><span id="ledtxt" data-notrans>전원 대기</span></span>
+        <span class="item">구동축 <span id="shaft" class="shaft" data-notrans>— 정지</span></span>
+      </div>
+
+      <svg id="dials" viewBox="0 0 400 208" aria-label="리미트 다이얼"></svg>
+      <div id="narr" class="narr" data-notrans></div>
+
+      <div class="ctrls">
+        <label>열림 회전수 설정 : <span class="cntbadge"><b id="cntval">10</b>회전</span>
+          <input id="cnt" type="range" min="3" max="30" value="10" step="1">
+        </label>
+        <div class="btns">
+          <button id="btnPlay" class="primary">▶ 자동 시연</button>
+          <button id="btnStep">다음 단계 ▶</button>
+          <button id="btnReset">↻ 처음으로</button>
+        </div>
+      </div>
+
+      <ol class="steps" id="steplist">
+        <li data-s="0">양쪽 화살표를 <b>0</b>에 맞춤 (안전 상태 · 전기 넣어도 정지)</li>
+        <li data-s="1"><span class="setdial">녹색</span> 다이얼로 열림 회전수 설정</li>
+        <li data-s="2"><b>열림</b> 작동 → 돌기가 롤러 눌러 자동 정지</li>
+        <li data-s="3"><b>닫힘</b> 작동 → 반대 돌기가 롤러 눌러 자동 정지</li>
+        <li data-s="4">완료 (열린 만큼 자동으로 닫힘)</li>
+      </ol>
+    </div>
+
+    <div class="subh">글로 보는 상세 절차</div>
+    <details class="acc"><summary>좌측용 설정 (열림·닫힘)</summary><div class="accbody">
+      <div class="subh2">1) 열림 회전수 설정</div>
+      <ol class="proc">
+        <li>전기 공급 전 <b>양쪽 화살표를 모두 "0"</b>에 맞춤. (둘 다 0이면 DC24V를 넣어도 작동 안 함)</li>
+        <li>컨트롤러 운전스위치를 <b>열림</b>으로 → 청색＋·갈색－ 공급 → LED <b style="color:#1a7f37">녹색</b> 점등.</li>
+        <li><b>녹색 노브를 시계방향</b>으로 돌려 화살표를 원하는 회전수 눈금에 맞춤. (적색은 0 그대로)</li>
+        <li>구동축이 <b>시계방향</b>으로 회전하며 열림. 녹색 화살표는 롤러 쪽으로, 적색 화살표는 롤러에서 멀어짐.</li>
+        <li>녹색 돌기가 녹색 롤러를 누르면 <b>자동 정지</b>. (적색 화살표는 회전한 숫자만큼 이동)</li>
+      </ol>
+      <div class="subh2">2) 닫힘 회전수 설정</div>
+      <ol class="proc">
+        <li>운전스위치를 <b>닫힘</b>으로 → LED <b style="color:#b91c1c">적색</b>, 구동축 반시계 회전하며 닫힘.</li>
+        <li>적색 화살표가 시계방향으로 적색 롤러 쪽으로 이동, 녹색 화살표는 멀어짐.</li>
+        <li>적색 돌기가 적색 롤러를 누르면 <b>자동 정지</b>. — 별도로 설정하지 않아도 <b>열린 만큼 동일하게</b> 닫힘.</li>
+      </ol>
+      <div class="tipbox">닫힘을 조금 더 하려면, 닫힘 완료 후 적색 다이얼을 반시계로 돌리거나 적색 노브를 살짝 한 번 누르면 구동축이 약 반 바퀴 더 회전합니다.</div>
+    </div></details>
+    <details class="acc"><summary>우측용 설정 (거울대칭)</summary><div class="accbody">
+      <p style="font-size:14px">우측용은 전기 공급 전 양쪽 화살표를 모두 "0"에 맞추는 것은 같고, <b>극성·회전방향·설정 다이얼이 반대</b>입니다.</p>
+      <ul class="bullet">
+        <li><b>열림</b> — 운전스위치 열림 → <b>갈색＋·청색－</b> → LED <b style="color:#b91c1c">적색</b>, 구동축 <b>반시계</b> 회전. <b>적색 노브를 반시계</b>로 돌려 열림 회전수 설정(녹색은 0). 적색 돌기가 롤러를 누르면 정지.</li>
+        <li><b>닫힘</b> — 운전스위치 닫힘 → LED <b style="color:#1a7f37">녹색</b>, 구동축 <b>시계</b> 회전. 녹색 돌기가 롤러를 누르면 정지. 열린 만큼 자동으로 닫힘.</li>
+      </ul>
+      <p class="note">※ 위 시뮬레이터에서 <b>우측용</b>을 선택하면 극성·LED·회전방향·설정 다이얼이 자동으로 바뀝니다.</p>
+    </div></details>
+  </section>
+
+  <!-- ===== 8. 전체 설명서 ===== -->
+  <section id="manual">
+    <h2><span class="bar"></span>전체 설명서 (원본)</h2>
+    <p style="font-size:14.5px;color:var(--sub);margin-top:-4px">이 웹설명서는 원본 PDF의 모든 내용을 담고 있습니다. 원본 스캔이 필요할 때만 아래에서 펼쳐 보세요.</p>
+    <a class="btn pdf" href="WSM-6035_manual.pdf" target="_blank" rel="noopener">📄 PDF 원본 다운로드 (20p · 4.4MB)</a>
+    <details class="acc" id="galleryAcc"><summary>원본 스캔 20페이지 펼쳐보기</summary><div class="accbody"><div class="gallery" id="gallery"></div></div></details>
+  </section>
+
+  <!-- ===== 9. A/S ===== -->
+  <section id="contact">
+    <h2><span class="bar"></span>A/S · 제품보증</h2>
+    <div class="card contact">
+      <div class="row"><span class="k">제조사</span><span>(주)우성하이텍 (WSH)</span></div>
+      <div class="row"><span class="k">주소</span><span>경남 양산시 동면 양산대로 446</span></div>
+      <div class="row"><span class="k">품질보증기간</span><span>구입일로부터 1년</span></div>
+      <div class="row"><span class="k">부품보유기간</span><span>5년</span></div>
+      <div class="row"><span class="k">홈페이지</span><span><a href="http://www.wsh.co.kr" style="color:#0b6bcb">www.wsh.co.kr</a></span></div>
+    </div>
+    <details class="acc"><summary>유상서비스 대상 (무상기간 내라도 유상 처리)</summary><div class="accbody">
+      <ul class="bullet">
+        <li>전기용량(전압)·전기종류를 틀리게 연결하여 고장난 경우</li>
+        <li>최대허용 전류·토크 이상 사용으로 과부하 고장</li>
+        <li>정격퓨즈를 사용하지 않아 고장</li>
+        <li>떨어뜨림·충격으로 인한 파손·기능 고장</li>
+        <li>소비자가 임의 분해하여 부속품 분실·파손</li>
+        <li>물에 잠기게 하거나 안전커버를 덮지 않아 내부 침수</li>
+        <li>천재지변(낙뢰·화재·풍수해·염해·지진 등)에 의한 고장</li>
+      </ul>
+      <p class="note">※ 교환·수리·환불 등 기타 보상은 소비자 피해보상기준에 따릅니다. 고장이 아닌 단순 조정·재설치는 요금이 부과될 수 있으니 반드시 사용설명서를 먼저 읽어 주십시오.</p>
+    </div></details>
+    <a class="btn tel" href="tel:0553658801">📞 전화 상담 · 055-365-8801</a>
+    <p class="note" style="text-align:center">팩스 055-365-8333 · e-mail wsh@wsh.co.kr</p>
+  </section>
+
+  <footer>
+    <div class="logo">◤ 롤업스타™</div>
+    (주)우성하이텍 · WSM-6035 · v1.0
+  </footer>
+</div>
+
+<script>
+/* ===== 페이지 라우터 ===== */
+(function(){
+  var PAGES=[
+    {id:'safe',t:'안전 주의사항',i:'⚠️'},
+    {id:'spec',t:'제품 사양·성능',i:'📋'},
+    {id:'parts',t:'각부 명칭',i:'🔩'},
+    {id:'install',t:'설치방법',i:'🏗️'},
+    {id:'power',t:'전원·회전방향',i:'⚡'},
+    {id:'limit-principle',t:'리미트 설정 원리',i:'🎛️'},
+    {id:'limit',t:'리미트 설정하기',i:'🎬'},
+    {id:'manual',t:'전체 설명서(원본)',i:'📄'},
+    {id:'contact',t:'A/S·연락처',i:'📞'}
+  ];
+  var home=document.getElementById('home');
+  var toc=document.getElementById('toc');
+  var homeBtn=document.getElementById('homeBtn'), abTitle=document.getElementById('abTitle'), abPage=document.getElementById('abPage');
+
+  PAGES.forEach(function(p,idx){
+    var s=document.getElementById(p.id); if(!s) return;
+    s.classList.add('page');
+    // 목차 카드
+    var a=document.createElement('a'); a.href='#'+p.id;
+    a.innerHTML='<span class="ti">'+p.i+'</span><span class="tt">'+(idx+1)+'. '+p.t+'</span><span class="tn">'+(idx+1)+' / '+PAGES.length+'</span>';
+    toc.appendChild(a);
+    // 이전/다음 페이저
+    var prev=idx>0?PAGES[idx-1]:null, next=idx<PAGES.length-1?PAGES[idx+1]:null;
+    var d=document.createElement('div'); d.className='pager';
+    d.innerHTML='<button class="prev">'+(prev?'◀ '+prev.i+' '+prev.t:'◀ 목차')+'</button>'+
+                '<button class="next">'+(next?next.t+' '+next.i+' ▶':'목차 ▶')+'</button>';
+    d.querySelector('.prev').addEventListener('click',function(){location.hash=prev?prev.id:'home';});
+    d.querySelector('.next').addEventListener('click',function(){location.hash=next?next.id:'home';});
+    s.appendChild(d);
+  });
+
+  // PC 사이드바 구성
+  var sidebar=document.getElementById('sidebar');
+  if(sidebar){
+    sidebar.innerHTML='<div class="sbrand">◤ 롤업스타™ WSM-6035<small>전동개폐기 사용설명서</small></div>';
+    var ha=document.createElement('a'); ha.href='#home'; ha.dataset.id='home';
+    ha.innerHTML='<span class="si">🏠</span>목차 홈'; sidebar.appendChild(ha);
+    PAGES.forEach(function(p,idx){
+      var a=document.createElement('a'); a.href='#'+p.id; a.dataset.id=p.id;
+      a.innerHTML='<span class="si">'+p.i+'</span>'+(idx+1)+'. '+p.t; sidebar.appendChild(a);
+    });
+  }
+
+  homeBtn.addEventListener('click',function(){location.hash='home';});
+
+  function show(id){
+    var found=null, fi=-1;
+    PAGES.forEach(function(p,i){if(p.id===id){found=p;fi=i;}});
+    home.classList.remove('active');
+    PAGES.forEach(function(p){var s=document.getElementById(p.id);if(s)s.classList.remove('active');});
+    if(!found){
+      home.classList.add('active'); abTitle.textContent='◤ 롤업스타 · WSM-6035'; abPage.textContent='';
+      homeBtn.style.visibility='hidden';
+    } else {
+      var sec=document.getElementById(id);
+      sec.classList.add('active');
+      abTitle.textContent=found.i+' '+found.t;
+      abPage.textContent=(fi+1)+'/'+PAGES.length;
+      homeBtn.style.visibility='visible';
+      // display:none→block 전환 시 lazy 이미지가 안 뜨는 경우 강제 로드
+      sec.querySelectorAll('img').forEach(function(im){
+        if(im.closest('details:not([open])')) return; // 접힌 details 안의 이미지는 펼칠 때 로드
+        if(!im.complete || im.naturalWidth===0){ im.loading='eager'; var s=im.getAttribute('src'); im.setAttribute('src',s); }
+      });
+    }
+    if(sidebar){var cur=found?id:'home';sidebar.querySelectorAll('a').forEach(function(a){a.classList.toggle('on',a.dataset.id===cur);});}
+    window.scrollTo(0,0);
+  }
+  window.addEventListener('hashchange',function(){show((location.hash||'#home').slice(1));});
+  show((location.hash||'#home').slice(1));
+
+  // ===== 모바일 좌우 스와이프로 페이지 넘기기 =====
+  function pageIndex(){var id=(location.hash||'#home').slice(1);for(var i=0;i<PAGES.length;i++)if(PAGES[i].id===id)return i;return -1;}
+  function swipeNext(){var i=pageIndex();location.hash=(i===-1)?PAGES[0].id:(i<PAGES.length-1?PAGES[i+1].id:'home');}
+  function swipePrev(){var i=pageIndex();if(i>0)location.hash=PAGES[i-1].id;else if(i===0)location.hash='home';}
+  var tsx=0,tsy=0,tst=0,tskip=false;
+  document.addEventListener('touchstart',function(e){
+    if(e.touches.length!==1){tskip=true;return;}
+    var t=e.touches[0];tsx=t.clientX;tsy=t.clientY;tst=Date.now();
+    tskip=!!(e.target&&e.target.closest&&e.target.closest('.sim,input,button,select,textarea,a,.gallery'));
+  },{passive:true});
+  document.addEventListener('touchend',function(e){
+    if(tskip||e.changedTouches.length!==1)return;
+    var t=e.changedTouches[0],dx=t.clientX-tsx,dy=t.clientY-tsy,dt=Date.now()-tst;
+    if(dt<700&&Math.abs(dx)>60&&Math.abs(dx)>Math.abs(dy)*1.8){ if(dx<0)swipeNext();else swipePrev(); }
+  },{passive:true});
+
+  // ===== 다크/라이트 테마 토글 =====
+  function applyImages(dark){
+    document.querySelectorAll('img[data-dark]').forEach(function(im){
+      if(!im.dataset.light) im.dataset.light=im.getAttribute('src');
+      var want=dark?im.dataset.dark:im.dataset.light;
+      if(im.getAttribute('src')!==want) im.setAttribute('src',want);
+    });
+  }
+  function setTheme(t){
+    document.documentElement.setAttribute('data-theme',t);
+    try{localStorage.setItem('wsm-theme',t);}catch(e){}
+    applyImages(t==='dark');
+    var b=document.getElementById('themeBtn'); if(b) b.textContent=(t==='dark'?'☀️':'🌙');
+  }
+  var curTheme=document.documentElement.getAttribute('data-theme')||'light';
+  applyImages(curTheme==='dark');
+  var tb=document.getElementById('themeBtn');
+  if(tb){ tb.textContent=(curTheme==='dark'?'☀️':'🌙');
+    tb.addEventListener('click',function(){ setTheme((document.documentElement.getAttribute('data-theme')==='dark')?'light':'dark'); }); }
+  // 시스템 테마 변경 추종(수동 저장이 없을 때만)
+  try{ if(window.matchMedia){ matchMedia('(prefers-color-scheme: dark)').addEventListener('change',function(e){ if(!localStorage.getItem('wsm-theme')) setTheme(e.matches?'dark':'light'); }); } }catch(e){}
+})();
+</script>
+
+<script>
+/* 전체 설명서 이미지 지연 로딩 */
+(function(){
+  var g=document.getElementById('gallery');
+  for(var i=1;i<=20;i++){
+    var n=(i<10?'0':'')+i;
+    var fig=document.createElement('figure');
+    var img=document.createElement('img'); img.src='img/p'+n+'.jpg'; img.loading='lazy'; img.alt='설명서 '+i+'페이지';
+    var cap=document.createElement('figcaption'); cap.textContent=i+' / 20 페이지';
+    fig.appendChild(img); fig.appendChild(cap); g.appendChild(fig);
+  }
+  // 모든 접이식(details): 펼칠 때 내부 이미지 강제 로드
+  document.querySelectorAll('details').forEach(function(dt){
+    dt.addEventListener('toggle',function(){
+      if(dt.open) dt.querySelectorAll('img').forEach(function(im){ if(!im.complete||im.naturalWidth===0){im.loading='eager';var s=im.getAttribute('src');im.setAttribute('src',s);} });
+    });
+  });
+})();
+</script>
+
+<script>
+/* ===== 리미트 설정 시뮬레이터 (좌측용/우측용) ===== */
+(function(){
+  var SVGNS="http://www.w3.org/2000/svg";
+  var D=9, RED="#d21f3c", GRN="#1a9a4a";
+  var svg=document.getElementById('dials'); if(!svg) return;
+  function el(t,a){var e=document.createElementNS(SVGNS,t);for(var k in a)e.setAttribute(k,a[k]);return e;}
+
+  // roll=롤러(0) 각도(위 기준, +시계), dir=+1 눈금 시계 / -1 반시계 (좌우 거울대칭)
+  function buildDial(cx,cy,R,color,name,roll,dir){
+    var g=el('g',{});
+    g.appendChild(el('circle',{cx:cx,cy:cy,r:R,fill:'#fff',stroke:'#ddd','stroke-width':2}));
+    g.appendChild(el('circle',{cx:cx,cy:cy,r:R-14,fill:'#fafafa',stroke:'#eee','stroke-width':1}));
+    for(var c=0;c<=35;c++){
+      var a=(roll+dir*c*D)*Math.PI/180, big=(c%5===0), r1=R-2, r2=R-(big?11:6);
+      g.appendChild(el('line',{x1:cx+r1*Math.sin(a),y1:cy-r1*Math.cos(a),x2:cx+r2*Math.sin(a),y2:cy-r2*Math.cos(a),stroke:big?'#888':'#ccc','stroke-width':big?1.8:1}));
+      if(big){var rt=R-22;var t=el('text',{x:cx+rt*Math.sin(a),y:cy-rt*Math.cos(a)+4,'font-size':10,'text-anchor':'middle',fill:'#666','font-weight':700});t.textContent=c;g.appendChild(t);}
+    }
+    g.appendChild(el('circle',{cx:cx,cy:cy,r:9,fill:'#e8e8e8',stroke:'#bbb'}));
+    g.appendChild(el('line',{x1:cx-6,y1:cy,x2:cx+6,y2:cy,stroke:'#999','stroke-width':2}));
+    g.appendChild(el('line',{x1:cx,y1:cy-6,x2:cx,y2:cy+6,stroke:'#999','stroke-width':2}));
+    var ra=roll*Math.PI/180, rx=cx+(R+5)*Math.sin(ra), ry=cy-(R+5)*Math.cos(ra);
+    var roller=el('rect',{x:rx-8,y:ry-5,width:16,height:9,rx:3,fill:'#cfcfcf',stroke:'#999',transform:'rotate('+roll+' '+rx+' '+ry+')'}); g.appendChild(roller);
+    var arm=el('g',{});
+    arm.appendChild(el('polygon',{points:(cx-4)+','+cy+' '+(cx+4)+','+cy+' '+cx+','+(cy-R+5),fill:color}));
+    arm.appendChild(el('circle',{cx:cx,cy:cy-R+4,r:5,fill:color,stroke:'#fff','stroke-width':1.5}));
+    g.appendChild(arm);
+    var nl=el('text',{x:cx,y:cy+R+20,'font-size':13,'text-anchor':'middle',fill:color,'font-weight':800}); nl.textContent=name; g.appendChild(nl);
+    svg.appendChild(g);
+    return {arm:arm,roller:roller,cx:cx,cy:cy,roll:roll,dir:dir};
+  }
+  var red=buildDial(112,96,64,RED,'적색 다이얼',-45,-1), green=buildDial(288,96,64,GRN,'녹색 다이얼',45,1);
+
+  var SIDE='left', N=10, offG=0, offR=0, openF=0, busy=false, step=0;
+  var $=function(id){return document.getElementById(id);};
+  var led=$('led'), ledtxt=$('ledtxt'), shaft=$('shaft'), narr=$('narr'), polbar=$('polbar');
+  var film=$('film'), roll=$('roll'), gapDim=$('gapDim'), gapLine=$('gapLine'), gapTxt=$('gapTxt');
+  var hwall=$('hwall'), lblOpen=$('lblOpen'), lblClose=$('lblClose');
+  function positionHouse(side){var L=side==='left';
+    hwall.setAttribute('x1',L?70:290);hwall.setAttribute('x2',L?70:290);
+    film.setAttribute('x',L?52:291);
+    roll.setAttribute('x',L?47:286);
+    lblOpen.setAttribute('x',L?46:314);lblOpen.setAttribute('text-anchor',L?'end':'start');
+    lblClose.setAttribute('x',L?46:314);lblClose.setAttribute('text-anchor',L?'end':'start');
+    gapLine.setAttribute('x1',L?30:330);gapLine.setAttribute('x2',L?30:330);
+    gapTxt.setAttribute('x',L?33:330);gapTxt.setAttribute('text-anchor',L?'end':'start');
+  }
+  var FILM_TOP=55, FILM_BOT=134, FILM_RANGE=FILM_BOT-FILM_TOP;
+
+  function lang(){return window.WSM_LANG||'ko';}
+  var SIMT={
+    ko:{red:'적색',green:'녹색',cw:'시계방향',ccw:'반시계방향',cwS:'시계',ccwS:'반시계',
+      ledG:'녹색 점등',ledR:'적색 점등',ledIdle:'전원 대기',shCw:'↻ 시계방향',shCcw:'↺ 반시계방향',shStop:'— 정지',
+      polL:'열림 극성 : 청색 <b>＋</b> · 갈색 <b>－</b>',polR:'열림 극성 : 갈색 <b>＋</b> · 청색 <b>－</b>',
+      reset:'양쪽 화살표를 <b>0</b>에 맞춘 상태입니다. 이때는 두 다이얼의 돌기가 모두 롤러를 누르고 있어 <b>DC24V를 넣어도 작동하지 않습니다</b>(안전).',
+      s1:function(c,N){return '<b>'+c.openC+'</b> 노브를 눌러 <b>'+c.setDir+'</b>으로 돌려 화살표를 <b>'+N+'회전</b> 눈금에 맞춥니다. (반대색 다이얼은 0 그대로)';},
+      s2r:function(c){return '운전스위치 <b>열림</b> → LED <b>'+c.openC+'</b>, 구동축이 '+(c.openSh==='cw'?'시계':'반시계')+'방향으로 회전하며 필름이 <b>열립니다</b>. '+c.openC+' 화살표는 롤러 쪽으로 이동.';},
+      s2d:function(c,N){return '✅ <b>'+c.openC+' 돌기</b>가 롤러를 눌러 <b>자동 정지</b>. 설정한 <b>'+N+'회전</b>만큼 열렸습니다.';},
+      s3r:function(c){return '운전스위치 <b>닫힘</b> → LED <b>'+c.closeC+'</b>, 구동축이 '+(c.closeSh==='cw'?'시계':'반시계')+'방향으로 회전하며 필름이 <b>닫힙니다</b>. '+c.closeC+' 화살표가 롤러 쪽으로 이동.';},
+      s3d:function(c){return '✅ <b>'+c.closeC+' 돌기</b>가 롤러를 눌러 <b>자동 정지</b>. 열림 회전수와 <b>똑같이</b> 닫혔습니다.';},
+      s4:'🎉 <b>설정 완료!</b> 닫힘은 별도 설정 없이 열린 만큼 자동으로 맞춰집니다. 설정 후 반드시 <b>안전커버를 닫아</b> 빗물 유입을 막으세요.'},
+    ja:{red:'赤',green:'緑',cw:'時計回り',ccw:'反時計回り',cwS:'時計',ccwS:'反時計',
+      ledG:'緑 点灯',ledR:'赤 点灯',ledIdle:'電源待機',shCw:'↻ 時計回り',shCcw:'↺ 反時計回り',shStop:'— 停止',
+      polL:'開き極性 : 青 <b>＋</b> · 茶 <b>－</b>',polR:'開き極性 : 茶 <b>＋</b> · 青 <b>－</b>',
+      reset:'両方の矢印を <b>0</b> に合わせた状態です。このとき両ダイヤルの突起がローラーを押しているため、<b>DC24Vを入れても作動しません</b>（安全）。',
+      s1:function(c,N){return '<b>'+c.openC+'</b>ノブを押して<b>'+c.setDir+'</b>に回し、矢印を<b>'+N+'回転</b>の目盛に合わせます。（反対色のダイヤルは0のまま）';},
+      s2r:function(c){return '運転スイッチ<b>開</b> → LED<b>'+c.openC+'</b>、駆動軸が'+(c.openSh==='cw'?'時計':'反時計')+'回りに回転してフィルムが<b>開きます</b>。'+c.openC+'の矢印はローラー側へ移動。';},
+      s2d:function(c,N){return '✅ <b>'+c.openC+'の突起</b>がローラーを押して<b>自動停止</b>。設定した<b>'+N+'回転</b>だけ開きました。';},
+      s3r:function(c){return '運転スイッチ<b>閉</b> → LED<b>'+c.closeC+'</b>、駆動軸が'+(c.closeSh==='cw'?'時計':'反時計')+'回りに回転してフィルムが<b>閉じます</b>。'+c.closeC+'の矢印がローラー側へ移動。';},
+      s3d:function(c){return '✅ <b>'+c.closeC+'の突起</b>がローラーを押して<b>自動停止</b>。開き回転数と<b>同じだけ</b>閉じました。';},
+      s4:'🎉 <b>設定完了！</b> 閉じは別途設定しなくても開いた分だけ自動で合います。設定後は必ず<b>安全カバーを閉じて</b>雨水の侵入を防いでください。'},
+    en:{red:'Red',green:'Green',cw:'clockwise',ccw:'counter-clockwise',cwS:'CW',ccwS:'CCW',
+      ledG:'Green on',ledR:'Red on',ledIdle:'Power idle',shCw:'↻ Clockwise',shCcw:'↺ CCW',shStop:'— Stopped',
+      polL:'Open polarity : Blue <b>＋</b> · Brown <b>－</b>',polR:'Open polarity : Brown <b>＋</b> · Blue <b>－</b>',
+      reset:'Both arrows are set to <b>0</b>. Both dial tabs press their rollers, so <b>it will not run even with DC24V</b> (safe).',
+      s1:function(c,N){return 'Press the <b>'+c.openC+'</b> knob and turn it <b>'+c.setDir+'</b> to set the arrow to <b>'+N+' turns</b>. (Leave the other dial at 0.)';},
+      s2r:function(c){return 'Switch to <b>Open</b> → LED <b>'+c.openC+'</b>; the shaft turns '+(c.openSh==='cw'?'clockwise':'counter-clockwise')+' and the film <b>opens</b>. The '+c.openC+' arrow moves toward its roller.';},
+      s2d:function(c,N){return '✅ The <b>'+c.openC+' tab</b> presses the roller → <b>auto-stop</b>. Opened by the set <b>'+N+' turns</b>.';},
+      s3r:function(c){return 'Switch to <b>Close</b> → LED <b>'+c.closeC+'</b>; the shaft turns '+(c.closeSh==='cw'?'clockwise':'counter-clockwise')+' and the film <b>closes</b>. The '+c.closeC+' arrow moves toward its roller.';},
+      s3d:function(c){return '✅ The <b>'+c.closeC+' tab</b> presses the roller → <b>auto-stop</b>. Closed by the same amount it opened.';},
+      s4:'🎉 <b>Done!</b> Closing needs no separate setting — it matches how far it opened. Always <b>close the safety cover</b> afterward to keep rain out.'}
+  };
+  var lastLED='', lastShaft='', curMsgFn=null;
+  function cfg(){var T=SIMT[lang()];
+    return SIDE==='left'
+      ? {openDial:'green',openC:T.green,closeC:T.red,openLED:'green',closeLED:'red',openSh:'cw',closeSh:'ccw',pol:T.polL,setDir:T.cw}
+      : {openDial:'red',openC:T.red,closeC:T.green,openLED:'red',closeLED:'green',openSh:'ccw',closeSh:'cw',pol:T.polR,setDir:T.ccw};
+  }
+  function setPressed(n,on,c){n.setAttribute('fill',on?c:'#cfcfcf');n.setAttribute('stroke',on?c:'#999');}
+  function angleOf(dl,off){return dl.roll+dl.dir*off*D;}
+  function render(){
+    red.arm.setAttribute('transform','rotate('+angleOf(red,offR)+' '+red.cx+' '+red.cy+')');
+    green.arm.setAttribute('transform','rotate('+angleOf(green,offG)+' '+green.cx+' '+green.cy+')');
+    setPressed(red.roller,offR<0.4,RED);
+    setPressed(green.roller,offG<0.4,GRN);
+    var rollY=FILM_BOT-openF*FILM_RANGE;
+    film.setAttribute('y',FILM_TOP); film.setAttribute('height',Math.max(0.1,rollY-FILM_TOP)); roll.setAttribute('y',rollY-4);
+    if(openF>0.02){gapDim.setAttribute('opacity','1');gapLine.setAttribute('y1',rollY);gapLine.setAttribute('y2',FILM_BOT);gapTxt.setAttribute('y',(rollY+FILM_BOT)/2+3);}
+    else gapDim.setAttribute('opacity','0');
+  }
+  function setLED(c){lastLED=c;var T=SIMT[lang()];led.className='led'+(c?' '+c:'');ledtxt.textContent=c==='green'?T.ledG:c==='red'?T.ledR:T.ledIdle;}
+  function setShaft(d){lastShaft=d;var T=SIMT[lang()];shaft.className='shaft'+(d?' '+d:'');shaft.textContent=d==='cw'?T.shCw:d==='ccw'?T.shCcw:T.shStop;}
+  function say(fn){curMsgFn=(typeof fn==='function')?fn:function(){return fn;};narr.innerHTML=curMsgFn();}
+  function relang(){polbar.innerHTML=cfg().pol;setDialLabel();setLED(lastLED);setShaft(lastShaft);if(curMsgFn)narr.innerHTML=curMsgFn();}
+  window.WSM_SIMRELANG=relang;
+  function marks(){document.querySelectorAll('#steplist li').forEach(function(li){var s=+li.dataset.s;li.classList.toggle('on',s===step);li.classList.toggle('done',s<step);});}
+  function setDialLabel(){document.querySelectorAll('#steplist .setdial').forEach(function(e){e.textContent=cfg().openC;});}
+
+  function tween(dur,fn){return new Promise(function(res){var t0=performance.now();(function fr(){var t=Math.min(1,(performance.now()-t0)/dur);fn(t);render();if(t<1)setTimeout(fr,16);else res();})();});}
+  var ease=function(t){return t<.5?2*t*t:1-Math.pow(-2*t+2,2)/2;};
+
+  function reset(){
+    busy=false;step=0;N=+$('cnt').value;offG=0;offR=0;openF=0;
+    setLED('');setShaft('');polbar.innerHTML=cfg().pol;setDialLabel();positionHouse(SIDE);
+    say(function(){return SIMT[lang()].reset;});
+    marks();render();updateBtns();
+  }
+  function doStep1(){var c=cfg();step=1;marks();setLED('');setShaft('');
+    say(function(){return SIMT[lang()].s1(cfg(),N);});
+    return c.openDial==='green'?tween(900,function(t){offG=ease(t)*N;}):tween(900,function(t){offR=ease(t)*N;});
+  }
+  function doStep2(){var c=cfg();step=2;marks();setLED(c.openLED);setShaft(c.openSh);
+    say(function(){return SIMT[lang()].s2r(cfg());});
+    return tween(2600,function(t){var e=ease(t);if(c.openDial==='green'){offG=N*(1-e);offR=N*e;}else{offR=N*(1-e);offG=N*e;}openF=e;}).then(function(){setShaft('');say(function(){return SIMT[lang()].s2d(cfg(),N);});});
+  }
+  function doStep3(){var c=cfg();step=3;marks();setLED(c.closeLED);setShaft(c.closeSh);
+    say(function(){return SIMT[lang()].s3r(cfg());});
+    return tween(2600,function(t){var e=ease(t);if(c.openDial==='green'){offR=N*(1-e);offG=N*e;}else{offG=N*(1-e);offR=N*e;}openF=1-e;}).then(function(){setShaft('');setLED(c.closeLED);say(function(){return SIMT[lang()].s3d(cfg());});});
+  }
+  function doStep4(){step=4;marks();setLED('');setShaft('');say(function(){return SIMT[lang()].s4;});}
+  var steps=[null,doStep1,doStep2,doStep3,doStep4];
+
+  function updateBtns(){$('cnt').disabled=busy||step>0;$('btnStep').disabled=busy||step>=4;$('btnPlay').disabled=busy;
+    document.querySelectorAll('#sideSeg button').forEach(function(b){b.disabled=busy;});}
+  async function runStep(i){if(busy)return;busy=true;updateBtns();var r=steps[i]&&steps[i]();if(r&&r.then)await r;busy=false;updateBtns();}
+  $('btnStep').onclick=function(){if(busy||step>=4)return;runStep(step+1);};
+  $('btnReset').onclick=reset;
+  $('btnPlay').onclick=async function(){if(busy)return;reset();busy=true;updateBtns();
+    await doStep1();await new Promise(function(r){setTimeout(r,500);});
+    await doStep2();await new Promise(function(r){setTimeout(r,900);});
+    await doStep3();await new Promise(function(r){setTimeout(r,700);});
+    doStep4();busy=false;updateBtns();};
+  $('cnt').oninput=function(){N=+this.value;$('cntval').textContent=N;if(step===0){render();}};
+  document.querySelectorAll('#sideSeg button').forEach(function(b){b.onclick=function(){if(busy)return;
+    document.querySelectorAll('#sideSeg button').forEach(function(x){x.classList.remove('active');});
+    b.classList.add('active');SIDE=b.dataset.side;reset();};});
+
+  reset();
+})();
+</script>
+
+<div class="modal" id="transModal" data-notrans>
+  <div class="box">
+    <div class="ic">🌐</div>
+    <p id="transMsg"></p>
+    <button id="transOk">OK</button>
+  </div>
+</div>
+<script src="i18n.js"></script>
+<script>
+/* ===== 다국어(한/일/영) 번역 ===== */
+(function(){
+  var TR=window.WSM_TR||{};
+  var MSG={
+    ja:{d:"このページはAI（人工知能）による翻訳です。誤訳が含まれる場合がございますが、あらかじめご了承のうえご覧いただけますと幸いです。",ok:"確認しました"},
+    en:{d:"This page has been translated by AI. Some parts may be mistranslated, so we kindly ask for your understanding. Thank you.",ok:"OK"}
+  };
+  var SKIP={SCRIPT:1,STYLE:1,NOSCRIPT:1};
+  var store=[], collected=false, curLang='ko', keys=null;
+  function getKeys(){ if(!keys) keys=Object.keys(TR).sort(function(a,b){return b.length-a.length;}); return keys; }
+  function collect(){
+    if(collected) return;
+    var tw=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,{acceptNode:function(n){
+      if(!n.nodeValue||!n.nodeValue.trim()) return NodeFilter.FILTER_REJECT;
+      var p=n.parentNode;
+      while(p&&p.nodeType===1){
+        if(SKIP[p.tagName]) return NodeFilter.FILTER_REJECT;
+        if(p.hasAttribute&&p.hasAttribute('data-notrans')) return NodeFilter.FILTER_REJECT;
+        p=p.parentNode;
+      }
+      return NodeFilter.FILTER_ACCEPT;
+    }});
+    var n; while(n=tw.nextNode()) store.push({node:n,ko:n.nodeValue});
+    collected=true;
+  }
+  function translate(ko,lang){
+    var s=ko, ks=getKeys();
+    for(var i=0;i<ks.length;i++){var k=ks[i]; if(s.indexOf(k)>-1){var v=TR[k][lang]; if(v!=null) s=s.split(k).join(v);}}
+    return s;
+  }
+  function applyLang(lang){
+    collect();
+    for(var i=0;i<store.length;i++){var e=store[i]; e.node.nodeValue=(lang==='ko')?e.ko:translate(e.ko,lang);}
+    curLang=lang; window.WSM_LANG=lang;
+    document.documentElement.setAttribute('data-lang',lang);
+    try{localStorage.setItem('wsm-lang',lang);}catch(_){}
+    if(window.WSM_SIMRELANG) window.WSM_SIMRELANG();
+    document.querySelectorAll('#langbar button').forEach(function(b){b.classList.toggle('on',b.dataset.lang===lang);});
+  }
+  var modal=document.getElementById('transModal'), msg=document.getElementById('transMsg'), ok=document.getElementById('transOk');
+  function showModal(lang){ if(!MSG[lang])return; msg.textContent=MSG[lang].d; ok.textContent=MSG[lang].ok; modal.classList.add('show'); }
+  ok.addEventListener('click',function(){modal.classList.remove('show');});
+  modal.addEventListener('click',function(e){if(e.target===modal)modal.classList.remove('show');});
+  function setLang(lang){ if(lang===curLang)return; applyLang(lang); if(lang!=='ko') showModal(lang); }
+  document.querySelectorAll('#langbar button').forEach(function(b){ b.addEventListener('click',function(){ setLang(b.dataset.lang); }); });
+  // 항상 한국어로 시작 (언어 선택은 세션 내에서만 · 저장 복원 안 함, 옛 저장값 정리)
+  try{localStorage.removeItem('wsm-lang');}catch(_){}
+})();
+</script>
+</body>
+</html>
