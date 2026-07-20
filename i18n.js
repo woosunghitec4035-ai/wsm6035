@@ -165,6 +165,9 @@ window.WSM_TR = {
   "가이드 암 핀 (기본 32∅용)":{ja:"ガイドアームピン（標準32∅用）",en:"Guide-arm pin (standard, for 32∅)"},
   "※19∅용으로 변경 주문 가능":{ja:"※19∅用に変更注文可能",en:"※Can be ordered for 19∅ instead"},
   "편리부품(별도판매)":{ja:"便利部品（別売）",en:"Optional parts (sold separately)"},
+  "편리부품 (별도판매)":{ja:"便利部品（別売）",en:"Optional Parts (sold separately)"},
+  "기본 제공 부품 · ① 개폐축 커플링 세트(황색도금) / ② 가이드 암 커플링 세트(은색도금) / ③ 가이드 암 선회 축 부품":{ja:"標準付属部品 · ① 開閉軸カップリングセット（黄色メッキ） / ② ガイドアームカップリングセット（銀色メッキ） / ③ ガイドアーム旋回軸部品",en:"Included parts · ① Shaft coupling set (yellow-plated) / ② Guide-arm coupling set (silver-plated) / ③ Guide-arm pivot-shaft parts"},
+  "편리부품(별도판매) · 가이드 롤러 세트(전용/범용, 궤도 25∅) / 전선연결부 보호함 & 클립 세트 / 비닐보호 튜브(내경 25∅·22∅)":{ja:"便利部品（別売） · ガイドローラーセット（専用/汎用、軌道25∅） / 配線接続部の保護ケース＆クリップセット / ビニール保護チューブ（内径25∅・22∅）",en:"Optional parts (sold separately) · Guide-roller set (specific/universal, 25∅ track) / Wire-junction protector & clip set / Vinyl protective tube (ID 25∅/22∅)"},
   "— 가이드 롤러 세트(본 제품 전용 / 범용, 궤도 25∅), 전선연결부 보호함 & 클립 세트, 비닐보호 튜브(내경 25∅·22∅). 제품과 함께 제공되지 않습니다.":{ja:"— ガイドローラーセット（本製品専用 / 汎用、軌道25∅）、配線接続部の保護ケース＆クリップセット、ビニール保護チューブ（内径25∅・22∅）。製品には付属しません。",en:"— Guide-roller set (product-specific / universal, 25∅ track), wire-junction protector & clip set, vinyl protective tube (ID 25∅/22∅). Not included with the product."},
 
   // Ⅳ. 설치
